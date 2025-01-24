@@ -16,6 +16,7 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #A020F0;
+    --clr-vsCode: #282c34;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -361,8 +362,8 @@ header {
 }
 
 /* .about-me__img {
-    box-shadow: var(--bs);
-} */
+        box-shadow: var(--bs);
+    } */
 
 @media (min-width: 600px) {
     .about-me {
@@ -487,4 +488,70 @@ header {
 .portfolio-item-individual p {
     max-width: 700px;
     margin: 0 auto
+}
+
+.visual-problem {
+    background-color: var(--clr-dark);
+    background-image: url(../img/services-bg.jpg);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.section__title--problem {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+
+.section__title--problem::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.problems {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+    /* Ensures responsiveness */
+}
+
+.problem {
+    display: flex;
+    flex-direction: column;
+    /* Ensures headers stay on top */
+    align-items: center;
+    max-width: 500px;
+}
+
+.problem h3 {
+    margin-bottom: 1.5em;
+    /* Adjust the spacing between header and image */
+}
+
+.problem img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Ensures proper spacing and alignment */
+}
+
+@media (min-width: 800px) {
+    .problem {
+        display: column;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .problem+.problem {
+        margin-left: 2em;
+    }
 }
