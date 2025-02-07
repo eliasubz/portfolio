@@ -16,7 +16,7 @@
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #A020F0;
-    --clr-vsCode: #282c34;
+    --clr-vsCode: #232b31;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -432,6 +432,77 @@ header {
     opacity: .5;
 }
 
+/* My projects */
+.projects {
+    background-color: var(--clr-dark);
+    /* color: var(--clr-light); */
+    text-align: center;
+    margin: 0 auto;
+}
+
+.projects h2 {
+    color: var(--clr-light);
+    padding-bottom: 1em;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+}
+
+.project__item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.project img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* 
+.project-text {
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+} */
+
+.project-text h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.project-text p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+/* Responsive Change */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
 
 /* footer */
 
@@ -441,7 +512,6 @@ header {
     text-align: center;
     padding: 2.5em 0;
     font-size: var(--fs-h3);
-
 }
 
 .footer a {
@@ -552,6 +622,56 @@ header {
     }
 
     .problem+.problem {
+        margin-left: 2em;
+    }
+}
+
+.scraper-idea {
+    background-color: var(--clr-vsCode);
+    background-image: url(../img/services-bg.jpg);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-light);
+    text-align: center;
+}
+
+.workflow {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section__title--flow {
+    grid-area: center;
+}
+
+
+.step {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.step .icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.step h4 {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+
+/* Responsive Layout */
+@media (min-width: 800px) {
+    .steps {
+        display: flex;
+        /* justify-content: space-around; */
+        max-width: 1000px;
+    }
+
+    .step+.step {
         margin-left: 2em;
     }
 }
