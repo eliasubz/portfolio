@@ -38,29 +38,53 @@
     </header>
 
     <!-- Introduction -->
-    <section class="intro" id="home">
+    <section class="intro" id="home_scraper">
         <h1 class="section__title section__title--intro">
-            This is my Job <strong>Scarping Project</strong>
+            <strong>
+                Job Scraping
+            </strong>
+            Project
         </h1>
-        <p class="section__subtitle section__subtitle--intro">Job scraper</p>
+        <p class="section__subtitle section__subtitle--intro">Job scraper for Iceland</p>
         <img src="img\window_scraper.jpg" alt="" class="intro__img">
     </section>
+
+
 
     <section class="problem-statement" id="science">
         <h2 class="section__title section__title--science">Scientific Approach</h2>
         <div class="science">
             <div class="science">
-                <h3>Problem Statement</h3>
+                <h3>Problem</h3>
                 <p>
-                    Develop a job scraper that manually navigates job websites, extracts listings based on specific
-                    language requirements and returns relevant job links.
+                    Before I came to Iceland I wanted to find a job. And although this language, that is <a
+                        href="https://www.polyglossic.com/icelandic-strong-weak-adjectives/" target="_blank">very
+                        hard</a>, is spoken by a total of <a href="https://en.wikipedia.org/wiki/Icelandic_language"
+                        target="_blank">315.000 people</a>
+                    I decided not to persue icelandic literacy.<br>
+                    Now the problem was that: The biggest job platform in iceland
+                    <!-- , <a href="https://alfred.is"
+                        target="_blank">alfred.is</a>, -->
+                    required users to open each job posting to determine the language requirements. In spite
+                    of the fact that other filter options,like locations, job types, etc., were available any way of
+                    filtering langauges was impossible.
+                </p>
+            </div> <!-- / service -->
+        </div> <!-- / services -->
+        <div class="science">
+            <div class="science">
+                <h3>Solution</h3>
+                <p>
+                    <strong>Automate</strong> my job search with a custom-built web scraper.
+                    This tool navigates job websites,
+                    <strong>extracts</strong>
+                    listings based on the target language competency, and outputs <strong>relevant</strong> job links.
                 </p>
             </div> <!-- / service -->
         </div> <!-- / services -->
 
-        <a href="#work" class="btn">My Work</a>
     </section>
-
+    <!-- 
     <div class="portfolio-item-individual">
 
 
@@ -72,9 +96,8 @@
             goes through all the jobs and analysis the language requirements to make a list of
             jobs that had langauge requirements that we met.</p>
         <img src="img/scrape-alfred.png" alt="">
-        <!-- <p>Focus on the insights of the project and details</p> -->
-
-    </div>
+        
+    </div> -->
 
 
     <!-- Visual Explanation -->
@@ -84,13 +107,13 @@
 
 
             <div class="problem">
-                <h3>Clicking the Job</h3>
+                <h3>1. Clicking the Job</h3>
                 <img src="img\CLick 1.png" width="400" height="400" style="border-radius: 50px;">
 
             </div> <!-- / services -->
 
             <div class="problem">
-                <h3>Reading the Language Requiremtent</h3>
+                <h3>2. Reading the Language Requiremtent</h3>
 
                 <img src="img/Showing Languagnne reqs1.png" width="400" height="400" style="border-radius: 50px;">
 
@@ -142,7 +165,10 @@
             <div class="step">
                 <div class="icon">🔗</div>
                 <h4>Fetch Job Listings</h4>
-                <p>Start by accessing the website (<code>alfred.is</code>) and collecting the links to all job postings.
+                <p>Start by accessing the website <a href="https://alfred.is"
+                        target="_blank">(<code>alfred.is</code>)</a> and
+                    collecting the links to
+                    all job postings.
                 </p>
             </div>
 
@@ -150,7 +176,8 @@
             <div class="step">
                 <div class="icon">🔍</div>
                 <h4>Analyze Job Details</h4>
-                <p>For each job posting, scrape the details to determine the language requirements.</p>
+                <p>For each job posting, look through the HTML for the details of the icelandic language requirements.
+                </p>
             </div>
 
             <!-- Step 3 -->
