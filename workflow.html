@@ -7,71 +7,92 @@
     <title>Responsive Workflow</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        .services {
-            display: block;
-            margin: 0 auto;
+        .workflow .steps-container {
+            /* Changed the selector */
+            display: flex;
+            /* Remove flexbox for vertical stacking */
+            flex-direction: column;
+            /* Stack items vertically */
+            gap: 20px;
+            /* Add some spacing between steps */
+        }
+
+        .workflow .step {
             padding: 20px;
+            border: 1px solid #ccc;
+            /* Optional: Add borders for visual separation */
+            border-radius: 5px;
+            /* Optional: Add rounded corners */
+            /* Add other styling as needed */
         }
 
-        .service {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .service .icon {
-            font-size: 2.5rem;
-            color: #007bff;
+        .workflow .step .icon {
+            font-size: 2em;
+            /* Adjust icon size */
             margin-bottom: 10px;
         }
 
-        .service h4 {
-            font-size: 1.25rem;
-            margin-top: 10px;
+        .workflow .step h4 {
+            margin-bottom: 5px;
         }
 
-        /* Responsive Layout */
-        @media (min-width: 800px) {
-            .services {
-                display: flex;
-                justify-content: space-around;
-                max-width: 1000px;
-            }
+        /* Other CSS styles for .section__title, etc. remain unchanged */
 
-            .service+.service {
-                margin-left: 2em;
+        /* Media query for smaller screens, if you want them side-by-side on larger screens */
+        @media (min-width: 768px) {
+
+            /* Adjust breakpoint as needed */
+            .workflow .steps-container {
+                flex-direction: row;
+                /* Back to side-by-side */
+                flex-wrap: wrap;
+                /* Allows wrapping if needed */
+                justify-content: space-around;
+                /* Distribute steps evenly */
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Workflow Overview</h1>
+    <section class="workflow" id="flow">
+        <h1 class="section__title section__title--flow">Workflow Overview</h1>
 
-        <div class="services">
-            <!-- Step 1 -->
-            <div class="service">
+        <div class="steps-container">
+            <div class="step">
                 <div class="icon">🔗</div>
                 <h4>Fetch Job Listings</h4>
-                <p>Start by accessing the website (<code>alfred.is</code>) and collecting the links to all job postings.
+                <p>Start by accessing the website <a href="https://alfred.is"
+                        target="_blank">(<code>alfred.is</code>)</a> and collecting the links to all job postings.</p>
+            </div>
+
+            <div class="step">
+                <div class="icon">🔍</div>
+                <h4>Analyze Job Details</h4>
+                <p>For each job posting, look through the HTML for the details of the Icelandic language requirements.
                 </p>
             </div>
 
-            <!-- Step 2 -->
-            <div class="service">
-                <div class="icon">🔍</div>
-                <h4>Analyze Job Details</h4>
-                <p>For each job posting, scrape the details to determine the language requirements.</p>
+            <div class="step">
+                <div class="icon">📝.</div>
+                <h4>Save to CSV</h4>
+                <p>Add all jobs to the final CSV file and sort them by difficulty.</p>
             </div>
 
-            <!-- Step 3 -->
-            <div class="service">
-                <div class="icon">📝</div>
-                <h4>Save to CSV</h4>
-                <p>Add filtered jobs (those with acceptable language requirements) to the final CSV file.</p>
+            <div class="step">
+                <div class="icon">⚙️</div>
+                <h4>Filter by Language</h4>
+                <p>Process the scraped data and filter jobs based on specific language criteria.</p>
             </div>
+
+            <div class="step">
+                <div class="icon">✅</div>
+                <h4>Display Results</h4>
+                <p>Present the filtered job listings in a user-friendly format.</p>
+            </div>
+
         </div>
-    </div>
+    </section>
 </body>
 
 </html>
